@@ -1,0 +1,92 @@
+.item {
+    width: 360px;
+    height: 275px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    @media(max-width: 1200px) {
+        width: 300px;
+        height: 230px;
+    }
+    @media(max-width: 1024px) {
+        width: 340px;
+        height: 249px;
+    }
+    @media(max-width: 760px) {
+        width: 280px;
+        height: 205px;
+    }
+    &:hover &_description {
+        top: 130px;
+        @media(max-width: 1200px) {
+            top: 110px;
+        }
+        @media(max-width: 760px) {
+            top: 90px;
+        }
+    }
+    &_img{
+        width: 360px;
+        height: 275px;
+        @media(max-width: 1200px) {
+            width: 300px;
+            height: 230px;
+        }
+        @media(max-width: 1024px) {
+            width: 340px;
+            height: 249px;
+        }
+    }
+    &_description {
+        position: absolute;
+        top: 248px;
+        width: 330px;
+        height: 145px;
+        background: rgba(255, 255, 255, 0.75);
+        padding: 5px 15px;
+        transition: top 0.5s;
+        @media(max-width: 1200px) {
+            width: 270px;
+            top: 204px;
+        }
+        @media(max-width: 1024px) {
+            width: 310px;
+            top: 220px;
+        }
+        @media(max-width: 760px) {
+            width: 250px;
+            top: 175px;
+        }
+    }
+
+    &_title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 20px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-transform: capitalize;
+        color: #000000;
+        margin: 0;
+    }
+
+    &_text {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+        color: #000000;
+        margin: 5px 0;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        >span {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 20px;
+            color: #000000;
+        }
+    }
+}

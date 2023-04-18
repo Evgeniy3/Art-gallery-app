@@ -1,0 +1,20 @@
+@import '../../scss/variables.scss';
+
+.header {
+    display: flex;
+    color: var(#{--text-color-default});
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+    &_btn {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+    }
+    &_svg {
+        fill: var(#{--text-color-default});
+    }
+}

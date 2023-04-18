@@ -1,0 +1,68 @@
+$light-color: #000000;
+$dark-color: #FFFFFF;
+$base-color: #FFFFFF;
+
+$hover-color-dark: #000000; 
+$hover-color-light: #FFFFFF; 
+
+$body-background-dark: #000000;
+$body-background-light: #E5E5E5;
+
+$components-border-dark: 1px solid #FFFFFF;
+$components-border-light: 1px solid #000000;
+
+$components-hover-dark: #FFFFFF;
+$components-hover-light: #000000;
+
+$components-background-dark: #000000;
+$components-background-light: #FFFFFF;
+
+$pagination-hover-dark: #464646;
+$pagination-hover-light: #EDEDED;
+
+$pagination-color-dark: rgba(255, 255, 255, 0.3);
+$pagination-color-light: rgba(0, 0, 0, 0.3);;
+
+
+:root {
+  //body-background
+  --body-background-dark: #{$body-background-dark};
+  --body-background-light: #{$body-background-light};
+  --body-background-default: var(#{--body-background-dark});
+
+  //components-background
+  --components-background-dark: #{$components-background-dark};
+  --components-background-light: #{$components-background-light};
+  --components-background-default: var(#{--components-background-dark});
+
+  //components-border
+  --components-border-dark: #{$components-border-dark};
+  --components-border-light: #{$components-border-light};
+  --components-border-default: #{$components-border-dark};
+
+  //components-hover
+  --components-hover-dark: #{$components-hover-dark};
+  --components-hover-light: #{$components-hover-light};
+  --components-hover-default: #{$components-hover-dark};
+
+  //text-hover
+  --text-hover-dark: #{$hover-color-dark};
+  --text-hover-light: #{$hover-color-light};
+  --text-hover-default: #{$hover-color-dark};
+
+  //pagination
+  --pagination-border-dark: #{$pagination-color-dark};
+  --pagination-border-light: #{$pagination-color-light};
+  --pagination-border-default: #{$pagination-color-dark};
+
+  //pagination-hover
+  --pagination-hover-dark: #{$pagination-hover-dark};
+  --pagination-hover-light: #{$pagination-hover-light};
+  --pagination-hover-default: #{$pagination-hover-dark};
+
+  //text
+  --text-color-dark: #{$dark-color};
+  --text-color-light: #{$light-color};
+  --text-color-default: var(#{--text-color-dark});
+
+}
