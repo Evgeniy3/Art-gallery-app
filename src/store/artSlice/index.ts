@@ -9,7 +9,17 @@ export const fetchArts = createAsyncThunk<Art[], SearchArtParams>('art/fetchArts
   const {
     search, currentPage, currentAuthor, currentLocation, currentCreatedFrom, currentCreatedBefore,
   } = params;
-  const { data } = await axios.get<Art[]>(`${process.env.REACT_APP_API_URL}paintings?_page=${currentPage}&_limit=12&q=${search}${currentAuthor}${currentLocation}${currentCreatedFrom}${currentCreatedBefore}`);
+  const { data } = await axios.get<Art[]>(`${process.env.REACT_APP_API_URL}paintings`, {
+    params: {
+      _page: currentPage,
+      _limit: 12,
+      q: search,
+      ...(currentAuthor ? { authorId: currentAuthor } : {}),
+      ...(currentLocation ? { locationId: currentLocation } : {}),
+      ...(currentCreatedFrom ? { created_gte: currentCreatedFrom } : {}),
+      ...(currentCreatedBefore ? { created_lte: currentCreatedBefore } : {}),
+    },
+  });
   return data;
 });
 

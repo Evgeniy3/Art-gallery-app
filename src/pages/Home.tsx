@@ -20,10 +20,10 @@ const Home: React.FC = () => {
 
   const getArts = async () => {
     const search = searchValue;
-    const currentAuthor = authorId ? `&authorId=${authorId}` : '';
-    const currentLocation = locationId ? `&locationId=${locationId}` : '';
-    const currentCreatedFrom = createdFrom ? `&created_gte=${createdFrom}` : '';
-    const currentCreatedBefore = createdBefore ? `&created_lte=${createdBefore}` : '';
+    const currentAuthor = authorId ? `${authorId}` : '';
+    const currentLocation = locationId ? `${locationId}` : '';
+    const currentCreatedFrom = createdFrom ? `${createdFrom}` : '';
+    const currentCreatedBefore = createdBefore ? `${createdBefore}` : '';
 
     dispatch(
       fetchArts({
