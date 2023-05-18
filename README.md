@@ -15,7 +15,7 @@
 
 - **ReactJS 18**
 - **TypeScript**
-- **Redux Toolkit** (хранение данных / пицц)
+- **Redux Toolkit** (хранение данных / артов)
 - **Axios** (отправка запроса на бэкенд)
 - **React Hooks** (хуки)
 - **Prettier** (форматирование кода)
